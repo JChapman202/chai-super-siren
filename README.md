@@ -1,4 +1,4 @@
-# Chai-super-siren #
+# chai-super-siren #
 
 ## Description ##
 

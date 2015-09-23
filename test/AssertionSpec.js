@@ -46,4 +46,23 @@ describe('Assertions', () => {
 			});
 		});
 	});
+
+	describe('Action assertions', () => {
+		describe('Given that a Siren instance has an action with a name', () => {
+			var name = chance.string();
+			var siren;
+
+			beforeEach(() => {
+				siren = Siren.empty.updateIn(['actions'], actions => actions.set(name, new Siren.Action({name: name})));
+			});
+
+			it('Should pass when asserting that the siren instance has an action with that name', () => {
+				expect(siren).to.haveAction(name);
+			});
+
+			it('Should not pass when asserting that the siren instance does not have an action with that name', () => {
+				expect(() => expect(siren).to.haveAction(name)).to.throw;
+			});
+		});
+	});
 });
