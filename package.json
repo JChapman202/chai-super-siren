@@ -1,0 +1,19 @@
+{
+  "name": "chai-super-siren",
+  "version": "0.0.1",
+  "description": "chai plugin which adds friendly assertion syntax to super-siren models",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Chai",
+    "Plugin",
+    "Test",
+    "Siren",
+    "Hypermedia",
+    "superagent"
+  ],
+  "author": "John Chapman",
+  "license": "MIT"
+}
