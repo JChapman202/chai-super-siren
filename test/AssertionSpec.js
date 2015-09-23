@@ -9,6 +9,26 @@ chai.use(chaiSuperSiren);
 var expect = chai.expect;
 
 describe('Assertions', () => {
+	describe('Property assertions', () => {
+		describe('Given that a property exists', () => {
+			var propertyName = chance.string();
+			var propertyValue = chance.string();
+			var siren;
+
+			beforeEach(() => {
+				siren = Siren.empty.updateIn(['properties'], properties => properties.set(propertyName, propertyValue));
+			});
+
+			it('Should pass when asserting that siren instances has that property', () => {
+				expect(siren).to.haveProperty(propertyName);
+			});
+
+			it('Should not pass when asserting that siren instances does not have that property', () => {
+				expect(() => expect(siren).to.not.haveProperty(propertyName));
+			});
+		});
+	});
+
 	describe('Class assertions', () => {
 		describe('Given that a Siren instance has a class', () => {
 			var cls = chance.string();

@@ -1,6 +1,6 @@
 {
   "name": "chai-super-siren",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "chai plugin which adds friendly assertion syntax to super-siren models",
   "main": "lib/index.js",
   "scripts": {
